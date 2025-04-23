@@ -1,0 +1,9 @@
+const {Builder, By, until} = require('selenium-webdriver');;
+(async function launchBrowser () {
+    let driver = await new Builder().forBrowser('chrome').build();
+
+    await driver.get('https://www.google.com');
+    await driver.sleep(5000);
+    await driver.quit();
+    
+}());
